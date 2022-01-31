@@ -18,7 +18,8 @@ Usage: event-listener <event-source> <type> <code> <value> <command> [skip-count
 Example: event-listener /dev/input/event0 4 4 85 "shutdown -P now"
 
 Parameters:
-    <event-source> - string; event-source path    <type>         - int; '*' = any
+    <event-source> - string; event-source path
+    <type>         - int; '*' = any
     <code>         - int; '*' = any
     <value>        - int; '*' = any
     <command>      - string; will be executed on match
