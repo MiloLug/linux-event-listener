@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
             "Usage: event-listener <event-source> <type> <code> <value> <command> [skip-count]\n"
             "Example: event-listener /dev/input/event0 4 4 85 \"shutdown -P now\"\n\n"
             "Parameters:\n"
-            "    <event-source> - string; event-source path"
+            "    <event-source> - string; event-source path\n"
             "    <type>         - int; '*' = any\n"
             "    <code>         - int; '*' = any\n"
             "    <value>        - int; '*' = any\n"
