@@ -7,7 +7,7 @@ SRC = main.c
 OBJ = ${SRC:.c=.o}
 BIN_NAME = event-listener
 
-all: options envent_listener
+all: options ${BIN_NAME}
 
 options:
 	@echo crealtime build options:
@@ -20,7 +20,7 @@ options:
 
 ${OBJ}: config.mk
 
-envent_listener: ${OBJ}
+${BIN_NAME}: ${OBJ}
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
 
 clean:
@@ -37,9 +37,9 @@ dist: clean
 install: all
 	mkdir -p ${DESTDIR}${PREFIX}/bin
 	cp -f ${BIN_NAME} ${DESTDIR}${PREFIX}/bin
-	chmod 755 ${DESTDIR}${PREFIX}/bin/crealtime
+	chmod 755 ${DESTDIR}${PREFIX}/bin/${BIN_NAME}
 
 uninstall:
-	rm -f ${DESTDIR}${PREFIX}/bin/crealtime
+	rm -f ${DESTDIR}${PREFIX}/bin/${BIN_NAME}
 
 .PHONY: all options clean dist install uninstall
