@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
             | (e.code == target_code)<<1
             | (e.value == target_value)<<2
             | ignore_mask
-        ) == 3) {  // == 0b111
+        ) == 7) {  // == 0b111
             if (dup_count == skip_count) {
                 #if uint64_t == __kernel_size_t
                     sprintf(
